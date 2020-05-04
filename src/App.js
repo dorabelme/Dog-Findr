@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-import { Swith, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Routes from './Routes';
+
 import whiskey from "./images/whiskey.jpg";
 import tubby from "./images/tubby.jpg";
 import hazel from "./images/hazel.jpg";
+import muffin from "./images/muffin.jpg";
+import reno from "./images/reno.jpg";
+import tomy from "./images/tomy.jpg";
 import "./App.css";
 
 class App extends Component {
@@ -37,14 +42,48 @@ class App extends Component {
           "Tubby does not like walks or exercise.",
           "Tubby loves eating food."
         ]
+      },
+      {
+        name: "Muffin",
+        age: 1,
+        src: muffin,
+        facts: [
+          "Muffin loves long walks.",
+          "Muffin loves eating food.",
+          "Muffin is well behaved."
+        ]
+      },
+      {
+        name: "Tomy",
+        age: 1,
+        src: tomy,
+        facts: [
+          "Tomy is a cute puppy.",
+          "Tomy does not like being alone.",
+          "Tomy loves playtime."
+        ]
+      },
+      {
+        name: "Reno",
+        age: 4,
+        src: reno,
+        facts: [
+          "Reno is really smart",
+          "Reno loves the outdoors.",
+          "Reno loves eating food."
+        ]
       }
     ]
   };
   render() {
-    return (
-      <div>
-        <Route path='/dogs' render={() => <h1>Dog List</h1>}></Route>
 
+    return (
+
+      <div>
+        <Navbar dogs={this.props.dogs} />
+        <div className="container">
+          <Routes dogs={this.props.dogs} />
+        </div>
       </div>
     );
   }
