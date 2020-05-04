@@ -5,7 +5,7 @@ App built using React.JS, React Router and Bootstrap.
 ## Short demo:
 
 <p align ="center">
-<img src="./dog_findr.gif" alt="movie fight app example">
+<img src="./dog_findr.gif" alt="Dog Findr app example">
 </p>
 
 ## Tech Stack
