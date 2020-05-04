@@ -6,7 +6,7 @@ export default class DogList extends Component {
     render() {
         return (
             <div className="DogList">
-                <h1 className="display-1 text-center my-5">Our Dogs</h1>
+                <h1 className="display-1 text-center my-2">Our Dogs</h1>
                 <div className="row">
                     {this.props.dogs.map(dog => (
                         <div className="Dog col-lg-4 text-center" key={dog.name}>
